@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detection...</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename = './stylesheets/style.css')}}">
+</head>
+<body>
+  <div id="particles-js"></div>
+    <nav class="menuBar">
+        <ul type="none">
+            <li>
+                <a onclick="scrol(0)">
+                    <svg class="home" width="26" height="23" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_6_7)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8759 3.86357C13.3455 3.54235 12.6545 3.54235 12.1241 3.86357L4.75568 8.32427C4.31653 8.59099 4.05263 9.0384 4.05263 9.51735V18.0544C4.05263 18.847 4.75958 19.4884 5.63158 19.4884H9.31579V15.1864C9.31579 13.8662 10.494 12.7964 11.9474 12.7964H14.0526C15.506 12.7964 16.6842 13.8662 16.6842 15.1864V19.4884H20.3684C21.2404 19.4884 21.9474 18.847 21.9474 18.0544V9.51735C21.9474 9.0384 21.6835 8.59099 21.2443 8.32427L13.8759 3.86357ZM11.5402 3.06818C12.4242 2.53282 13.5758 2.53282 14.4598 3.06818L21.8281 7.52887C22.5602 7.97246 23 8.71909 23 9.51735V18.0544C23 19.3747 21.8218 20.4444 20.3684 20.4444H16.1579C15.8673 20.4444 15.6316 20.2303 15.6316 19.9664V15.1864C15.6316 14.3949 14.9246 13.7524 14.0526 13.7524H11.9474C11.0754 13.7524 10.3684 14.3949 10.3684 15.1864V19.9664C10.3684 20.2303 10.1327 20.4444 9.84211 20.4444H5.63158C4.17821 20.4444 3 19.3747 3 18.0544V9.51735C3 8.71909 3.43979 7.97246 4.17179 7.52887L11.5402 3.06818Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <filter id="filter0_d_6_7" x="0.580244" y="0.2469" width="24.8395" height="22.6173" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset/>
+                        <feGaussianBlur stdDeviation="1.20988"/>
+                        <feComposite in2="hardAlpha" operator="out"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_6_7"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_6_7" result="shape"/>
+                        </filter>
+                        </defs>
+                    </svg>
+                </a>
+                    
+            </li>
+        </ul>
+        <ul type="none" class="group">
+            <li>
+                <a onclick="scrol(610)">About</a>
+            </li>
+            <li>
+                <a onclick="scrol(1130)">Image Classification</a>
+            </li>
+            <li>
+                <a onclick="scrol(1716)">Object Detection</a>
+            </li>
+            <!-- <li>
+                <a onclick="scrol(0)">Dev's</a>
+            </li> -->
+        </ul>
+    </nav>
+    
+    <section>
+        <div class="mid">
+            <img src="{{ url_for('static', filename = './assets/images/surf.png')}}" alt="A Man Surfing On a Surf Board">
+            <svg width="4" height="279" viewBox="0 0 4 279" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="1.59089" x2="1.59089" y2="278.093" stroke="white" stroke-width="3.13167"/>
+            </svg>            
+            <p>Visual-Semantic Alignment using Zero Shot object detection</p>
+        </div>
+
+        <div class="bg">
+            <img src="{{ url_for('static', filename='./assets/images/home-bg.png')}}" alt="">
+        </div>
+
+        <div>
+            <a href="#about">
+                <svg class="arrows">
+                    <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                    <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                    <path class="a3" d="M0 40 L30 72 L60 40"></path>
+                </svg>
+            </a>
+        </div>
+    </section>
+    <section id="sec2" class="sec2">
+        <h2>
+            Abstract
+        </h2>
+        <p id="about">
+            &emsp;&emsp;&emsp;Object detection is a computer vision task that involves identifying and localizing objects in images or videos. Object detection models require a large amount of labelled data in order to be trained effectively. This can be time-consuming and expensive to obtain. The object detector will only be able to recognize objects that it has been trained on. It will not be able to recognize novel objects that it has not seen during training. This problem can be achieved by using Zero shot which is a Machine learning approach. The Zero-shot object detection has the potential to significantly reduce the amount of labelled training data required for object detection tasks. In this, we are going to detect an object using Zero shot learning. It typically works by learning a visual semantics of the objects, where semantics can be used to represent the characteristics and attributes of different objects, and it is used to identify the relationships between different classes of objects. These visual semantics can be done using convolutional neural networks. This method typically involves training the model on a large dataset of images or videos. Finally, this method is used to classify objects based on their similarity to known classes.
+        </p>
+    </section>
+
+    <section class="imgClass">
+      <div style="margin-top: 4rem;">
+        <h2>
+          Image Classification
+        </h2>
+      </div>
+      <div class="img-cls-area">
+        <div id="drop-zone">
+            <img class="d-img" src="" alt="">
+            <p class="d-p">Drop file or click to upload</p>
+            <input type="file" id="myfile" hidden>
+        </div>
+        <div>
+          <button class="cls-btn" id="btn">Click to classify</button>
+        </div>
+        <div id="preview-zone">
+          <img class="d-img" src="" alt="">
+          <p class="d-p">Click to classify...</p>
+          <input type="file" id="myfile" hidden>
+        </div>
+      </div>
+        
+      </div>
+    </section>
+
+    <section class="imgClass">
+        <h1>Image Upload</h1>
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+            <label for="file">Select an image:</label>
+            <input type="file" name="file" id="file"><br><br>
+            <input type="submit" value="Upload">
+        </form>
+        
+        <img src="{{ output_image }}" alt="Output Image">
+    </section>
+
+    
+
+    
+
+    <script src="{{ url_for('static', filename = './jscripts/particles.js-master/particles.js-master/particles.js')}}"></script>
+    <script src="{{ url_for('static', filename = './jscripts/particles.js-master/particles.js-master/demo/js/app.js')}}"></script>
+
+    <!-- Drag Drop & Preview JS -->
+    <script>
+      const dropZone = document.querySelector('#drop-zone');
+        const inputElement = document.querySelector('#myfile');
+        const img = document.querySelector('.d-img');
+        let p = document.querySelector('.d-p')
+
+        inputElement.addEventListener('change', function (e) {
+            const clickFile = this.files[0];
+            if (clickFile) {
+                img.style = "display:block;";
+                p.style = 'display: none';
+                const reader = new FileReader();
+                reader.readAsDataURL(clickFile);
+                reader.onloadend = function () {
+                    const result = reader.result;
+                    let src = this.result;
+                    img.src = src;
+                    img.alt = clickFile.name
+                }
+            }
+        })
+        dropZone.addEventListener('click', () => inputElement.click());
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+        });
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            img.style = "display:block;";
+            let file = e.dataTransfer.files[0];
+
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onloadend = function () {
+                e.preventDefault()
+                p.style = 'display: none';
+                let src = this.result;
+                img.src = src;
+                img.alt = file.name
+            }
+        });
+// detection of file type
+        const dropZone2 = document.querySelector('#drop-zone2');
+        const inputElement2 = document.querySelector('#myfile2');
+        const img2 = document.querySelector('.d-img2');
+        const p2 = document.querySelector('.d-p2');
+
+        inputElement2.addEventListener('change', function (e) {
+            const clickFile2 = this.files[0];
+            if (clickFile2) {
+                img2.style = "display:block;";
+                p2.style = 'display: none';
+                const reader2 = new FileReader();
+                reader2.readAsDataURL(clickFile2);
+                reader2.onloadend = function () {
+                    const result2 = reader2.result;
+                    let src2 = this.result2;
+                    img2.src = src2;
+                    img2.alt = clickFile2.name
+                }
+            }
+        })
+        dropZone2.addEventListener('click', () => inputElement.click());
+        dropZone2.addEventListener('dragover', (e) => {
+            e.preventDefault();
+        });
+        dropZone2.addEventListener('drop', (e) => {
+            e.preventDefault();
+            img2.style = "display:block;";
+            let file2 = e.dataTransfer.files[0];
+
+            const reader2 = new FileReader();
+            reader2.readAsDataURL(file2);
+            reader2.onloadend = function () {
+                e.preventDefault()
+                p2.style = 'display: none';
+                let src2 = this.result2;
+                img2.src = src2;
+                img2.alt = file.name2
+            }
+        });
+
+        function scrol(pixel) {
+            window.scrollTo(0, pixel);
+        }
+        window.onscroll = function (e) {
+            console.log(window.scrollY); // Value of scroll Y in px
+        };
+    </script>
+</body>
+</html>

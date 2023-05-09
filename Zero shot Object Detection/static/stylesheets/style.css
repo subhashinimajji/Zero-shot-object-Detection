@@ -1,0 +1,244 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #000211;
+    margin-inline: 4em;
+}
+
+#particles-js {
+    height: 100vh;
+    width: 100vw;
+    float: left;
+    position: fixed;
+    opacity: 0.35;
+    z-index: -1;
+}
+
+section {
+    display: block;
+    height: 82.5vh;
+}
+
+.menuBar {
+    box-sizing: border-box;
+    float: left;
+    position: sticky;
+    top: 38px;
+    left: 20rem;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50vw;
+    height: 40px;
+    margin-inline: auto;
+    margin-top: 30px;
+    padding-left: 2em;
+    background: #14162e;
+    box-shadow: 0px 0px 96.3333px rgba(36, 39, 75, 0.5);
+    border-radius: 32.1111px;
+    border: 2px solid;
+    border-block-end-style: none;
+    border-color: rgba(36, 39, 75, 0.5);
+}
+.menuBar ul {
+    padding: 0;
+}
+.menuBar ul li {
+    margin-inline: auto;
+}
+
+.menuBar .group {
+    display: flex;
+    justify-content: space-evenly;
+    width: 30rem;
+}
+
+.menuBar .group li {
+    display: block;
+}
+
+.menuBar ul li a {
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Gotu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17.34px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    text-shadow: 0px 2.56889px 2.56889px rgba(0, 0, 0, 0.25);
+}
+
+.mid {
+    padding-top: 3rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50rem;
+    height: auto;
+}
+
+.mid img {
+    filter: drop-shadow(0px 0px 93.9502px rgba(36, 39, 75, 0.5));
+    width: 20rem;
+    height: 100%;
+}
+
+.mid p {
+    width: 295px;
+    font-family: 'Gotu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 41.9644px;
+    line-height: 121%;
+    display: block;
+    align-items: center;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+.bg {
+    top: 13rem;
+    position: absolute;
+}
+
+.bg img {
+    width: 100%;
+}
+
+.arrows {
+    width: 60px;
+    height: 72px;
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    bottom: 20px;
+}
+
+.arrows path {
+    stroke: #2994D1;
+    fill: transparent;
+    stroke-width: 1px;  
+    animation: arrow 2s infinite;
+    -webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow {
+    0% {opacity:0}
+    40% {opacity:1}
+    80% {opacity:0}
+    100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/ {
+    0% {opacity:0}
+    40% {opacity:1}
+    80% {opacity:0}
+    100% {opacity:0}
+}
+
+.arrows path.a1 {
+    animation-delay:-1s;
+    -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+    animation-delay:-0.5s;
+    -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 { 
+    animation-delay:0s;
+    -webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
+
+.sec2 {
+    padding-inline: 15rem;
+    padding-top: 9rem;
+}
+
+h2 {
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration-line: underline;
+    font-size: xx-large;
+    margin-block-end: 0.75em;
+}
+
+p {
+    color: #FFFFFF;
+    line-height: 35px;
+    text-align: justify;
+    font-family: 'Gotu';
+    font-style: normal;
+    font-size: 16px;
+}
+
+.img-cls-area {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.cls-btn {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 19px 24px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.cls-btn:active,
+.cls-btn:hover {
+  outline: 0;
+}
+
+/* Drop & Preview */
+
+#drop-zone, #drop-zone2 {
+    width: 20em;
+    height: 20em;
+    border: 2px dotted blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#preview-zone {
+    width: 20em;
+    height: 20em;
+    border: 2px dotted blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.d-img, .d-img2 {
+    object-fit: cover;
+    max-width: 20rem;
+    display: none;
+}
